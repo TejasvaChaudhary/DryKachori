@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainforest Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #00695c;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #b2dfdb;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts About Rainforests</h1>
+        <ul id="facts-list"></ul>
+        <button id="generate-facts">Generate Facts</button>
+    </div>
+    <script>
+        const facts = [
+            "Rainforests are home to more than half of the world's plant and animal species, despite covering only about 6% of the Earth's surface.",
+            "The tallest trees in the rainforest can reach heights of over 200 feet (60 meters). These towering giants are often called emergent trees.",
+            "Rainforests are structured in layers: the emergent layer, the canopy, the understory, and the forest floor. Each layer hosts different species of plants and animals.",
+            "Rainforests play a crucial role in regulating the Earth's climate by absorbing carbon dioxide and producing oxygen.",
+            "Many modern medicines are derived from rainforest plants. It is estimated that around 25% of modern medicines come from rainforest ingredients.",
+            "Rainforests are home to many indigenous tribes who rely on the forest for their livelihood, culture, and traditions.",
+            "Rainforests receive a significant amount of rainfall, typically between 1750 to 2000 millimeters (69 to 79 inches) annually, which is essential for their lush vegetation.",
+            "Rainforests are threatened by deforestation, logging, agriculture, and climate change, leading to loss of biodiversity and habitat.",
+            "Some rainforests, like the Amazon, are so vast that they create their own weather systems, influencing rainfall patterns in surrounding areas.",
+            "Many plants in the rainforest, such as orchids and bromeliads, are epiphytes, meaning they grow on other plants but do not harm them, using them merely for support."
+        ];
+
+        document.getElementById('generate-facts').addEventListener('click', function() {
+            const factsList = document.getElementById('facts-list');
+            factsList.innerHTML = ''; // Clear previous facts
+            facts.forEach(fact => {
+                const li = document.createElement('li');
+                li.textContent = fact;
+                factsList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>
